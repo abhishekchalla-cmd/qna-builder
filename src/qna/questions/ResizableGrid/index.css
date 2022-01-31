@@ -1,0 +1,50 @@
+.resizable-grid-container {
+  --border-color: #333;
+  --answer-border-color: #c07e00;
+  width: max-content;
+}
+.anchor {
+  height: 20px;
+  width: 20px;
+  background: orange;
+  border-radius: 40px;
+  cursor: se-resize;
+  pointer-events: all;
+  position: absolute;
+}
+
+.resizable-grid-table {
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+.resizable-grid-table .cell input {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.resizable-grid-table .cell {
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cell.answers-state {
+  border-right: 1px solid var(--answer-border-color);
+  border-bottom: 1px solid var(--answer-border-color);
+}
+
+.iti-container.default-type textarea {
+  @apply text-yellow-500;
+}
+
+.resize-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.resize-box.active {
+  outline: 3px solid #bbb;
+}
